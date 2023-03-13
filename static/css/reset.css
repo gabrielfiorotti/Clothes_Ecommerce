@@ -1,0 +1,39 @@
+/* ========== RESET ===========*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 62.5%; 
+    /* 1rem = 10px */
+
+
+    /* prevent to change the page colors with user's browser preferences */
+    color-scheme: light only;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 1.6rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

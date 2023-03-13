@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login - Admin
+{% endblock %}
+
+{% block main %}
+
+<div class="container">
+    <div class="error_message">
+        <img src="/static/assets/icon_error.svg" alt="error">
+        <h2>Sorry, Incorrect Credentials Provided.</h2>
+        <a href="/login_admin"><u>Try Again</u></a>
+    </div>
+</div>
+
+{% endblock %}

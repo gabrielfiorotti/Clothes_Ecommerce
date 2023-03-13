@@ -1,0 +1,361 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* mobile first */
+
+
+/* ================= header ============= */
+
+header
+{
+    background-color: #1C4B82;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7%;
+    height: 20vh;
+    font-size: 1.8rem;
+    color: white;
+    max-width: 100vw;
+}
+
+header > img
+{
+    max-width: 40%;
+    max-height: 90%;
+}
+
+nav > ul
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: 'DM Serif Display', sans-serif;
+    font-weight: bold;
+    color: #35B1F5;
+}
+
+
+/* .user_account > p
+{
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+    text-align: center;
+} */
+
+
+header button
+{
+    background-color: #4E7097;
+    color: white;
+    font-family: 'DM Serif Display', sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem; 
+    width: 10rem;
+    height: 2.8rem;
+    border-radius: 4px;
+    border: none;
+}
+
+
+
+/* ================= main ============= */
+
+
+
+.banner 
+{
+    color: white;
+    height: 80vh;
+    background-color: #1C4B82;
+    background-image: url("../assets/homepage.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.banner h1
+{
+    max-width: 72%;
+    font-size: 3.6rem;
+    padding-top: 9%;
+    padding-left: 9%;
+}
+
+
+
+
+/* =========  SECTION MAN ========== */
+
+/*  SHIRTS */
+
+.section_man_shirts
+{
+    /* border: .8rem solid #1C4B82; */
+    height: fit-content;
+    max-width: 100vw;
+}
+
+.section_man_shirts > .section_man_header
+{
+    font-family: 'DM Serif Display', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    padding-inline: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+}
+
+.btns 
+{
+    display: flex;
+    gap: 1.5rem;
+}
+
+
+.btn_orders
+{
+    font-size: 1.5rem;
+    font-family: 'DM Serif Display', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    padding: 0.8rem;
+    background-color: #4E7097;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+
+.btn_cart
+{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-family: 'DM Serif Display', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    padding: 0.8rem;
+    background-color: #35B1F5;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+
+
+
+/* SECTION CONTENT */
+
+.section_content
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 25px 0;
+    padding-inline: auto;
+    padding-bottom: 4rem;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.product_card
+{
+    width: fit-content;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    border: 1.5px solid black;
+}
+
+.product_card > img
+{
+    width: 16rem;
+    height: 30vh;
+    background-color: #D9D9D9;
+    transition: all 0.2s;
+    border: 1.3px solid black;
+}
+
+.product_card > img:hover
+{
+    transform: scale(1.02);
+}
+
+
+.product_card > p:nth-child(2)
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    border: 1.3px solid black;
+    width: 100%;
+    height: 2.5rem;
+    background-color: white;
+}
+
+.product_card form 
+{
+    border: 1px solid black;
+}
+
+.product_card > form > button
+{
+    font-family: 'DM Serif Display', sans-serif;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-color: #1C4B82;
+}
+
+.product_card > form > button:hover
+{
+    cursor: pointer;
+    opacity: 94%;
+}
+
+
+
+/* footer */
+
+footer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: auto;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    font-size: 1.6rem;
+    font-family: 'DM Serif Display', sans-serif;
+    text-align: center;
+    height: 7vh;
+    background-color: #4E7097;
+    color: white;
+    gap: 2rem;
+}
+
+footer > img
+{
+    width: 20rem;
+}
+
+
+/* ====================== RESPONSIVE ============================== */
+
+
+@media (min-width: 1024px)
+{
+
+    nav > ul
+    {
+        flex-direction: row;
+        gap: 5rem;
+        font-size: 2.3rem;
+    }
+
+
+    header button
+    {
+        height: 3.2rem;
+    }
+
+    header button:hover
+    {
+        cursor: pointer;
+        opacity: 90%;
+    }
+
+    .banner
+    {
+        background-size: cover;
+        background-position: center;
+        
+    }
+
+    .banner h1
+    {
+        padding-top: 5%;
+        padding-left: 20%;
+        max-width: 55%;
+    }
+
+
+    .section_man_shirts
+    {
+        padding-inline: 20%;
+        height: fit-content;
+    }
+
+    .section_man_shirts > .section_man_header
+    {
+        padding-bottom: 5rem;
+
+    }
+
+    .btn_orders:hover
+    {
+        cursor: pointer;
+    }
+
+    .btn_cart:hover
+    {
+        cursor: pointer;
+    }
+
+    .section_content
+    {
+        grid-template-columns: repeat(3, 1fr);
+        padding-bottom: 6rem;
+        gap: 25px 45px;
+    }
+
+
+    .product_card
+    {
+        width: 22rem;
+        height: 40vh;
+        border: none;
+    }
+
+    .product_card img
+    {
+        width: 100%;
+    }
+
+    .product_card > p:nth-child(2)
+    {
+        padding-top: 0.5rem;
+        font-family: 'Roboto', sans-serif;
+        height: 3rem;
+        font-weight: bold;
+    }
+
+    .product_card > form > button
+    {
+        min-height: max-content;
+    }
+
+
+
+}

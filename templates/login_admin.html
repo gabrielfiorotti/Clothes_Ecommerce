@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login - Admin
+{% endblock %}
+
+
+{% block main %}
+
+    <div class="page_container">
+        <img class="logo_complete" src="/static/assets/logo-bg-blue.svg" alt="Logo">
+        <div class="login_container">
+            <img src="/static/assets/admin_icon_white.svg" alt="Admin_Icon">
+            <h3>Admin Panel</h3>
+            <form action="/login_admin" method="post">
+                <input type="text" name="adminUsername" autocomplete="off" autofocus placeholder="Username">
+        
+                <input type="password" name="adminPassword" autocomplete="off" placeholder="Password">
+                
+                <button type="submit">LOG IN</button>
+            </form>
+            <p>You're not Admin? Back to <u><a class="link" href="/login">USERPAGE</a></u></p>
+        </div>
+    </div>
+
+{% endblock %}

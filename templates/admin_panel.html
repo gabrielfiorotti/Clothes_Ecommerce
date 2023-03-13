@@ -1,0 +1,197 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Admin Panel
+{% endblock %}
+
+{% block main %}
+
+    <div class="page_container">
+
+        <header>
+            <img src="/static/assets/logo-small.svg" alt="Logo">
+            <button><a href="/logout">LOG OUT</a></button>
+        </header>
+
+        <div class="sidebar">
+            <div class="option1 isActive" onclick="productsSelected()">
+                <p>Manage Products</p>
+            </div>    
+
+            <div class="line"></div>
+
+            <div class="option2" onclick="usersSelected()">
+                <p>Manage Users</p>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="option3" onclick="ordersSelected()">
+                <p>Manage Orders</p>
+            </div>
+        </div>
+
+       
+        <div id="main_content">
+
+            <!-- =================== PRODUCTS  ====================== -->
+
+            <div class="manage_products">
+                <h2>Manage Products</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Product</th>
+                            <th>Items Available</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in products_database %}
+                            <tr>
+                                <td>{{ row[0] }}</td>
+                                <td>{{ row[1] }}</td>
+                                <td>{{ row[2] }}</td>
+                                <td> 
+                                    <form action="" method="post">
+                                        <input type="hidden" name="product_id" value="{{ row[0] }}">
+                                        <button id="trash_product" type="submit">
+                                            <img title="Delete Product"src="/static/assets/trash.svg" alt="trash_can">
+                                        </button> 
+                                    </form>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                <div class="buttons">
+                    <button class="btn_newProduct" onclick="featureNewProduct()">
+                        Add New Product
+                    </button>
+    
+                    <button class="btn_newQuantity" onclick="featureNewQuantity()">
+                        Update Quantity
+                    </button>
+                </div>
+                
+                <div class="add_features">
+                    <div id="newProduct" class="addProduct">
+                        <form action="/admin_panel" method="post">
+                            <div>
+                                <p>Product Name</p>
+                                <input required type="text" name="newProduct" autocomplete="off">
+                            </div>
+                            
+                            <div>
+                                <p>Quantity</p>
+                                <input required type="number" name="quantity" autocomplete="off">
+                            </div>
+
+                            <div>
+                                <p>Price</p>
+                                <input required type="number" name="price" autocomplete="off" step="0.01" min="0" max="1000">
+                            </div>
+
+                            <div>
+                                <p>Image Path</p>
+                                <input required type="text" name="img_path" autocomplete="off">
+                            </div>
+                            
+                            <button type="submit">ADD</button>
+                        </form>
+                    </div>
+        
+                    <div id="newQuantity" class="addQuantity">
+                        <form action="/admin_panel" method="post">
+                            <select name="productName">
+                                <option disabled selected>Product</option>
+                                {% for row in products_database %}
+                                    <option value="{{ row[1] }}">{{ row[1] }}</option>
+                                {% endfor %}
+                            </select>
+                            
+                            <div>
+                                <p>Quantity</p>
+                                <input type="number" name="newQuantity" autocomplete="off">
+                            </div>
+                            
+                            <button type="submit">UPDATE</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ============== USERS  ============= -->
+
+            <div class="manage_users">
+                <h2>Manage Users</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+    
+                    <tbody>
+                        {% for row in users_database %}
+                            <tr>
+                                <td>{{ row[0] }}</td>
+                                <td>{{ row[1] }}</td>
+                                <td>
+                                    <form action="" method="post">
+                                        <input type="hidden" name="user_id" value="{{ row[0] }}">
+                                        <button type="submit" id="trash_user" >
+                                            <img title="Delete User"src="/static/assets/trash.svg" alt="trash_can">
+                                        </button> 
+                                    </form>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ============== ORDERS ============== -->
+
+            <div class="manage_orders">
+                <h2>Manage Orders</h2>
+                <table id="table_orders">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Total($)</th>
+                            <th>User</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+    
+                    <tbody>
+                        {% for row in orders_database %}
+                            <tr>
+                                <td>{{ row[0] }}</td>
+                                <td>{{ row[1] }}</td>
+                                <td>{{ row[2] }}</td>
+                                <td>{{ row[3] }}</td>
+                                <td id="row_user">{{ row[4] }}</td>
+                                <td>{{ row[5] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/static/js/admin_panel.js"></script>
+    
+{% endblock %}

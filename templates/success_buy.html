@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Success!
+{% endblock %}
+
+{% block main %}
+    
+    <div class="page_container">
+        
+        <div class="header">
+            <img src="/static/assets/logo-small.svg" alt="">
+        </div>
+
+        <a class="btn_backToStore" href="/"> 
+            <img src="/static/assets/arrow-left.svg" alt="arrowLeft">
+            <p>Back to Store</p> 
+        </a>
+
+        <div class="content">
+            <img src="/static/assets/success_buy.svg" alt="bought">
+
+            <h2>
+                Thank you for your purchase!
+            </h2>
+        </div>
+
+    </div>
+
+
+{% endblock %}

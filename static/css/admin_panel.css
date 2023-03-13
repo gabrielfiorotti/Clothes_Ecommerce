@@ -1,0 +1,516 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+/* mobile first */
+
+
+
+.page_container
+{
+    width: 100dvw;
+    overflow-x: hidden;
+}
+
+
+header
+{
+    background-color: #1C4B82;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    height: 20vh;
+    width: 100%;
+}
+
+header > img
+{
+    max-width: 47%;
+}
+
+
+header > button
+{
+    background-color: #35B1F5;
+    color: white;
+    font-family: 'DM Serif Display', sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem; 
+    width: 10rem;
+    height: 2.8rem;
+    border-radius: 4px;
+    border: none;
+}
+
+.sidebar
+{
+    height: 15vh;
+    background-color: #4E7097;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.line
+{
+    border-bottom: 1px solid white;
+    width: 100vw;
+}
+
+
+.option1
+{
+    width: 100%;
+    height: 7.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.option1 > p
+{
+    margin: 0;
+}
+
+.option1:hover
+{
+    cursor: pointer;
+}
+
+
+.option2
+{
+    width: 100%;
+    height: 7.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.option2 > p
+{
+    margin: 0;
+}
+
+.option2:hover
+{
+    cursor: pointer;
+}
+
+
+.option3
+{
+    width: 100%;
+    height: 7.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.option3 > p
+{
+    margin: 0;
+}
+
+.option3:hover
+{
+    cursor: pointer;
+}
+
+
+.isActive
+{
+    border: 4px solid #35B1F5;
+    max-width: 100%;
+}
+
+
+
+
+/*  =============================================== */
+
+
+#main_content
+{
+    height: fit-content;
+    width: 100%;
+}
+
+
+/* ================ TABLE CUSTOM ======================== */
+
+
+.table
+{
+    /* fix the colum width */
+    table-layout: fixed;
+    width: 100%;
+    overflow-x: auto;
+    padding-top: 1.7rem;
+    border-spacing: 30px 0px;
+}
+
+
+.table thead
+{
+    text-align: center;
+}
+
+.table th
+{
+    min-width: fit-content;
+}
+
+.table td
+{
+    padding-top: 3rem;
+    text-align: center;
+}
+
+
+#table_orders
+{
+    table-layout: fixed;
+    width: 100%;
+    overflow-x: auto;
+    padding-top: 1.7rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+
+#table_orders td
+{
+    padding-top: 3rem;
+    min-width: 50px;
+    font-size: 1.3rem;
+}
+
+#row_user
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ================ PRODUCTS ================== */
+
+
+.manage_products
+{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-inline: 5%;
+}
+
+
+.manage_products > h2
+{
+    font-family: 'DM Serif Display', sans-serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    text-decoration: underline;
+}
+
+
+
+#trash_product
+{
+    border: none;
+    background-color: white;
+    width: 3rem;
+}
+
+
+#trash_product:hover
+{
+    cursor: pointer;
+}
+
+
+.buttons 
+{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding-block: 2rem;
+}
+
+.btn_newProduct, .btn_newQuantity
+{
+    width: 15rem;
+    height: 4rem;
+}
+
+.btn_newProduct:hover, .btn_newQuantity:hover
+{
+    cursor: pointer;
+}
+
+
+
+.add_features
+{
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 70%;
+    height: fit-content;
+}
+
+
+/* new Products */
+
+#newProduct
+{
+    display: none;
+}
+
+.addProduct > form
+{
+    font-family: 'DM Serif Display', sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #D0D9E7;
+    width: 70vw;
+    height: fit-content;
+    gap: 1rem;
+}
+
+
+.addProduct > form > div > input
+{
+    width: 17rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid black
+}
+
+
+.addProduct > form > button
+{
+    font-family: 'DM Serif Display', sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    width: 6.5rem;
+    height: 2.4rem;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* new Quantity */
+
+#newQuantity
+{
+    display: none;
+}
+
+.addQuantity > form
+{
+    font-family: 'DM Serif Display', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #D0D9E7;
+    width: 70vw;
+    height: 16rem;
+    gap: 2rem;
+}
+
+
+.addQuantity > form > select
+{
+    margin-top: 2.5rem;
+    width: 17rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid black
+}
+
+
+.addQuantity > form > div > input
+{
+    width: 17rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid black
+}
+
+
+.addQuantity > form > button
+{
+    font-family: 'DM Serif Display', sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    width: 6.5rem;
+    height: 2.7rem;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+
+
+/* ================ USERS ================== */
+
+.manage_users
+{
+    width: 100vw;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-inline: 5%;
+}
+
+
+.manage_users > h2
+{
+    font-family: 'DM Serif Display', sans-serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    text-decoration: underline;
+}
+
+#trash_user
+{
+    border: none;
+    background-color: white;
+    width: 3rem;
+}
+
+#trash_user:hover
+{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* ================= ORDERS ================== */
+
+.manage_orders
+{
+    width: 100vw;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-inline: 5%;
+}
+
+
+.manage_orders > h2
+{
+    font-family: 'DM Serif Display', sans-serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+/* =========================== RESPONSIVE ============================= */
+
+@media (min-width: 1024px)
+{
+
+    body
+    {
+        overflow-x: hidden;
+    }
+
+    header > img
+    {
+        max-width: 17%;
+    }
+
+    .sidebar
+    {
+        height: fit-content;
+    }
+
+    .option1, .option2, .option3
+    {
+        height: 8vh;
+    }
+
+
+    .manage_products, .manage_users
+    {
+        padding-inline: 15%;
+    }   
+
+    .manage_orders
+    {
+        padding-inline: 10%;
+    }
+
+
+    #table_orders td, #table_orders th
+    {
+        font-size: 1.6rem;
+    }
+
+    #table_orders td
+    {
+        padding-bottom: 2rem;
+    }
+
+    .buttons
+    {
+        padding-top: 4rem;
+    }
+    
+
+    .addProduct form
+    {
+        width: auto;
+        height: 30rem;
+    }
+
+    .addQuantity form 
+    {
+        width: auto;
+        height: 20rem;
+    }
+
+    
+}

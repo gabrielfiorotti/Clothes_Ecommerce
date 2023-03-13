@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Out of stock!
+{% endblock %}
+
+{% block main %}
+
+  
+<div class="page_container">
+        
+    <div class="header">
+        <img src="/static/assets/logo-small.svg" alt="">
+    </div>
+
+    <a class="btn_backToStore" href="/"> 
+        <img src="/static/assets/arrow-left.svg" alt="arrowLeft">
+        <p>Back to Store</p> 
+    </a>
+
+    <div class="content">
+        <img src="/static/assets/fail_buy.svg" alt="fail_bought">
+
+        <h2>
+            Sorry, your cart contains product(s) that are out of stock :(
+        </h2>
+        <h2>
+            Try again later
+        </h2>
+    </div>
+
+</div>
+
+
+{% endblock %}

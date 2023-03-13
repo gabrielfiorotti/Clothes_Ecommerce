@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+
+{% block main %}
+
+    <div class="page_container">
+        <img class="logo_complete"src="/static/assets/logo-bg-blue.svg" alt="Logo">
+        <div class="login_container">
+            <form action="/register" method="post">
+                <input type="text" name="username" autocomplete="off" autofocus placeholder="Username">
+                
+                <input type="password" name="password" autocomplete="off" placeholder="Password">
+                
+                <input type="password" name="confirmation" autocomplete="off" placeholder="Confirm Password">
+                
+                <button type="submit">REGISTER</button>
+            </form>
+            <p>Already registered? <u><a class="link" href="/">LOGIN</a></u></p>
+        </div>
+    </div>
+
+{% endblock %}

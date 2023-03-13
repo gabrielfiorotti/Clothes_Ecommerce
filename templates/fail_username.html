@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+    <div class="container">
+        <div class="error_message">
+            <img src="/static/assets/icon_error.svg" alt="error">
+            <h2>Sorry, Username already exists.</h2>
+            <a href="/register"><u>Try Again</u></a>
+        </div>
+    </div>
+
+{% endblock %}

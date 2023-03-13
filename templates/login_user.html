@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login - User
+{% endblock %}
+
+
+{% block main %}
+
+    <div class="page_container">
+        <img class="logo_complete"src="/static/assets/logo-bg-blue.svg" alt="Logo">
+        <div class="login_container">
+            <form action="/login" method="post">
+                <input type="text" name="username" autocomplete="off" autofocus placeholder="Username">
+
+                <input type="password" name="password" autocomplete="off" placeholder="Password">
+                
+                <button type="submit">LOG IN</button>
+            </form>
+            <p>If you're not registered yet, click <u><a class="link" href="/register">HERE</a></u></p>
+        </div>
+
+        
+        <button id="btn_goToAdmin">
+            <a href="/login_admin">
+                <img src="/static/assets/admin-icon.svg" alt="">
+                <p>Admin</p>
+            </a>
+        </button>
+        
+
+    </div>
+
+   
+
+    
+
+{% endblock %}

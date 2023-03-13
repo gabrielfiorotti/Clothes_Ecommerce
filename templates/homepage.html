@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+
+<header>
+    <img src="/static/assets/logo-small.svg" alt="Logo">
+
+    <nav>
+        <ul>
+            <li><a href="#man">MAN</a></li>
+            <li><a href="#">WOMAN</a></li>
+            <li><a href="#">KIDS</a></li>
+        </ul>
+    </nav>
+    
+    <button><a href="/logout">LOG OUT</a></button>
+
+</header>
+
+
+<main>
+
+    <div class="banner">
+        <!-- <p>{{ get_flashed_messages() }}</p> -->
+        <h1>
+            Shop all your favorites sports <i>clothes</i> in just one place.
+        </h1>
+    </div>
+
+
+
+    <section id="man" class="section_man_shirts">
+
+        <div class="section_man_header">
+            <p>
+                <i><u>Shirts</u></i>
+            </p>
+
+            <div class="btns">
+                <button class="btn_orders">
+                    <a href="/my_orders">MY ORDERS</a>
+                </button>
+                
+                <button class="btn_cart">
+                    <img src="/static/assets/icon_cart.svg" alt="cart">
+                    <a href="/cart">CART</a>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="section_content">
+            {% for product in products_database %}
+                <div class="product_card">
+                    <img src="{{ product[4] }}" alt="{{ product[1] }}">
+                    <p>$ {{ product[3] }}</p>
+                    <form action="{{ url_for('add_to_cart') }}" method="post">
+                        <input type="hidden" name="product_id" value="{{ product[0] }}">
+                        <button type="submit">ADD TO CART</button>
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <img src="/static/assets/logo-no-background.png" alt="">
+    <div> 2023 © Designed and coded by Gabriel Fiorotti.</div>
+</footer>
+
+{% endblock %}
+

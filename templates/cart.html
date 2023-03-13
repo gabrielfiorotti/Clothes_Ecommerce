@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Cart
+{% endblock %}
+
+{% block main %}
+
+<div class="page_container">
+
+  <div class="header">
+    <img src="/static/assets/logo-small.svg" alt="">
+  </div>
+
+
+
+  <a class="btn_backToStore" href="/"> 
+    <img src="/static/assets/arrow-left.svg" alt="arrowLeft">
+    <p>Back to Store</p> 
+  </a>
+
+
+  <div class="title">
+    <h1>CART</h1>
+  </div>
+
+  <div class="table">
+    <table>
+      <thead>
+        <tr class="table_headings">
+          <th></th>
+          <!-- <th>Product</th> -->
+          <th>Items</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+  
+      <tbody>
+        <form id="table_form" action="/buy" method="post">
+          {% for item in cart_items %}
+            <input type="hidden" name="product_name[]" value="{{ item.name }}">
+            <input type="hidden" name="product_qty[]" value="{{ item.quantity }}">
+            <input type="hidden" name="subtotal[]" value="{{ item.subtotal }}">
+            <tr class="product_info">
+              <td><img src="{{ item.image_directory }}" alt="product image"></td>
+              <td>{{ item.quantity }}</td>
+              <td>{{ item.subtotal }}</td>  
+            </tr>
+            <tr>
+              <td>
+                  <div class="line"></div>
+              </td>
+              <td>
+                  <div class="line"></div>
+              </td>
+              <td>
+                  <div class="line"></div>
+              </td>
+          </tr>
+          {% endfor %}
+          <input type="hidden" name="username" value="{{ session['username'] }}">
+  
+          <tr class="total">
+            <td colspan="2">Total:</td>
+            <td>${{ total }}</td>
+          </tr>
+  
+          <tr id="btn_buy_position">
+            <td></td>
+            <td>
+              <button type="submit" id="btn_buy">BUY ALL</button>
+            </td>
+            <td></td>
+          </tr>
+          
+        </form>
+      </tbody>
+      
+    </table>
+  </div>
+  
+
+
+
+  <div class="btn_div">
+    <button class="btn_clear_cart">
+      <a href="/clear_cart">
+        <img title="Remove from Cart"src="/static/assets/trash.svg" alt="trash_can"> 
+        <p>CLEAR CART</p>
+      </a>
+    </button>
+  </div>
+  
+  
+</div>
+
+
+
+
+
+
+{% endblock %}
+

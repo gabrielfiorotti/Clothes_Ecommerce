@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+
+.page_container
+{
+    display: flex;
+    flex-direction: column;
+}
+
+header
+{
+    background-color: #1C4B82;
+    display: flex;
+    justify-content: center;
+}
+
+header > img
+{
+    width: 23rem;
+}
+
+
+.btn_backToStore
+{
+    width: fit-content;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-family: 'DM Serif Display', sans-serif;
+    justify-content: flex-start;
+}
+
+
+.title
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Serif Display', sans-serif;
+    width: 100dvw;
+    padding-bottom: 3rem;
+}
+
+.title > h1
+{
+    font-weight: 400;
+}
+
+
+
+.my_orders_table
+{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.table_headings > th
+{
+    padding-inline: 1rem;
+    font-size: 1.65rem;
+}
+
+
+.product_info
+{
+    border-bottom: 5rem;
+}
+
+.product_info > td
+{
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    text-align: center;
+}
+
+
+.line
+{
+    border-bottom: 0.5px dashed black;
+    width: 100%;
+    height: 0.1px;
+}
+
+
+
+/* ===================== RESPONSIVE =========================== */
+
+
+@media (min-width: 1024px)
+{
+
+    .page_container
+    {
+        overflow: hidden;
+    }
+
+    .title > h1 
+    {
+        padding-bottom: 1.7rem;
+    }
+
+
+    .my_orders_table
+    {
+        font-size: 1.75rem;
+    }
+
+    .table_headings > th
+    {
+        padding-inline: 5rem;
+    }
+    
+    .product_info > td
+    {
+        padding-block: 2rem;
+    }
+
+}

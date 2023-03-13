@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    My Orders
+{% endblock %}
+
+{% block main %}
+
+<div class="page_container">
+
+    <header>
+        <img src="/static/assets/logo-small.svg" alt="">
+    </header>
+
+    <a class="btn_backToStore" href="/"> 
+        <img src="/static/assets/arrow-left.svg" alt="arrowLeft">
+        <p>Back to Store</p> 
+    </a>
+
+    <div class="title">
+        <h1>MY ORDERS</h1>
+    </div>
+
+    <div class="my_orders_table">
+        <table>
+            <thead>
+                <tr class="table_headings">
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Total($)</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for row in user_orders %}
+                <tr class="product_info">
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[5] }}</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="line"></div>
+                    </td>
+                    <td>
+                        <div class="line"></div>
+                    </td>
+                    <td>
+                        <div class="line"></div>
+                    </td>
+                    <td>
+                        <div class="line"></div>
+                    </td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+</div>
+   
+    
+
+{% endblock %}
