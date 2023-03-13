@@ -1,6 +1,6 @@
 # CLOTHES E-Commerce
 
-#### Video Demo: https://youtu.be/eBy-MJG4fH4
+#### Video Demo: https://www.youtube.com/watch?v=eBy-MJG4fH4
 
 #### Description:
     This is my final project for CS50x course: a sports clothes e-commerce web application.
