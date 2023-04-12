@@ -51,11 +51,4 @@ In "Manage Users", you can see all the users registered in the site, with a uniq
 <br>
 In "Manage Orders", all orders placed by customers are stored in the database with the following data: id, name of the product, how many items of each product, total purchase price, witch username ordered and the date/time that the order was made.
 <br>
-<br>
-Admin's Credentials:
-username: *admin* | password: *admin*
-<br>
-<br>
-***NOTE: PLEASE, don't delete or add any products or users! I am sharing the admin's credentials with anyone that may have some interest to check inside this part of the application.***
-
-
+#### Check the video to see the result: https://www.youtube.com/watch?v=eBy-MJG4fH4
